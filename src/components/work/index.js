@@ -212,4 +212,4 @@ export default class Work extends Component {
   		setTimeout(() => this.refs.masonry.performLayout(), 1000)
   	}
 
-}
+} 
