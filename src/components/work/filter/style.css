@@ -1,0 +1,20 @@
+#filter {
+  border: 1px solid #e9e9e9; }
+  #filter input {
+    display: none; }
+  #filter label {
+    font-size: 14px;
+    display: block;
+    float: left;
+    width: 25%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    cursor: pointer;
+    user-select: none;
+    background-color: #fcfcfc; }
+    #filter label:active {
+      color: #3498db;
+      background-color: #f0f0f0; }
+  #filter input:checked + label {
+    color: #3498db;
+    background-color: #f0f0f0; }
