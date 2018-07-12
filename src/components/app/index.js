@@ -31,7 +31,7 @@ export default class App extends Component {
     		<div>
 				<header className='clearfix'>
 					<h1>Harry Solovay</h1>
-					<h3>UX Designer &#x26; Futurism Nerd</h3>
+					<h3>{ `UX Designer, Dev., Futurism Nerd` }</h3>
 				</header>
 				<main>
 					<Work />
