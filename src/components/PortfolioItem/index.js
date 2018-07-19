@@ -5,10 +5,10 @@ import styles from './styles.module.scss'
 
 export default ({
   url,
-  image,
+  thumbnail,
   title,
   description,
-  date
+  date,
 }) => (
   <Anchor
     className={ [styles.container, MasonryItemStyle].join(' ') }
@@ -16,8 +16,8 @@ export default ({
   >
     <div>
       <div
-        className={ styles.image }
-        style={{ backgroundImage: `url(${ image })` }}
+        className={ styles.thumbnail }
+        style={{ backgroundImage: `url(${ thumbnail })` }}
       />
       <div className={ styles.details }>
         <div className={ styles.title }>{ title }</div>

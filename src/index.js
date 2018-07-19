@@ -65,15 +65,12 @@ class App extends Component {
 				id : 'omj0hyx',
 				classes : false,
 				events: false,
-			}
+			},
     })
   }
 
   categoryFilterOnClick = (category) => {
-    console.log(category)
-    this.setState({ category }, () => {
-      console.log(this.state.category)
-    })
+    this.setState({ category })
   }
   
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { MasonryItemStyle } from 'components'
 import styles from './styles.module.scss'
 import { Anchor } from 'components'
@@ -10,23 +10,38 @@ export default () => (
         About Me
       </div>
       <div className={ styles.bio }>
-        { `I'm a software developer and music producer from New York City. I just graduated from Connecticut College, where I self-designed my major, ` }
+        { `I'm a software developer and ` }
+        <Anchor
+          href='https://soundcloud.com/solved1'
+          children={
+            <Fragment>
+              { `electronic beat-maker` }
+              <img
+                src={ require('assets/images/soundcloud-logo.svg') }
+                className={ styles.soundCloudLogo }
+                alt='SoundCloud Logo'
+              />
+            </Fragment>
+          }
+        />
+        { ` from New York City. I just graduated from Connecticut College, where I self-designed my major, ` }
         <Anchor
           href={ require('assets/portfolio/self-designed-major/harry-solovay-self-designed-major.pdf') }
           children={ `"User Experience in Technology"` }
         />
-        { ` (a synthesis of Computer Science, Psychology & Philosophy). I love the open source community, ReactJS ` }
+        { ` (a synthesis of Computer Science, Psychology & Philosophy). I love the open source community, ReactJS` }
         <img
           src={ require('assets/images/reactjs-logo.svg') }
           className={ styles.reactJSLogo }
           alt='ReactJS Logo'
         />
-        { `, and the NodeJS ecosystem ` }
+        { `, NodeJS` }
         <img
           src={ require('assets/images/nodejs-logo.svg') }
           className={ styles.nodeJSLogo }
           alt='NodeJS Logo'
         />
+        { ` and its ecosystem` }
         <img
           src={ require('assets/images/npm-logo.svg') }
           className={ styles.npmLogo }
