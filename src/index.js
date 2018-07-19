@@ -1,9 +1,82 @@
-import React from 'react'
-import { render } from 'react-dom'
+import 'normalize.css'
+import React, { Component } from 'react'
+import { Header, Section, About, Contact, CategoryFilter, PortfolioItem, Footer } from 'components'
+import Masonry from 'react-masonry-component'
+import styles from './styles.module.scss'
+import portfolioItems from 'assets/portfolio'
+import shortid from 'shortid'
+import WebFont from 'webfontloader'
+import ReactDOM from 'react-dom'
+import registerServiceWorker from 'utilities/registerServiceWorker'
 
-import App from './components/app'
+class App extends Component {
 
-render(
-	<App />,
-	document.getElementById('root')
-)
+  state = {
+    category: 'ALL',
+  }
+
+  render() {
+    return (
+      <div>
+
+        <Header />
+
+        <Section>
+          <div className={ styles.masonry }>
+            <Masonry>
+
+              <About />
+
+              <Contact />
+
+              <CategoryFilter
+                onClick={ this.categoryFilterOnClick }
+                activeCategory={ this.state.category }
+              />
+
+              {
+                portfolioItems.map(props => (
+                  (
+                    props.category === this.state.category ||
+                    this.state.category === 'ALL'
+                  ) ? (
+                      <PortfolioItem
+                        key={ shortid.generate() }
+                        { ...props }
+                      />
+                    )
+                  : null
+                ))
+              }
+
+            </Masonry>
+          </div>
+        </Section>
+
+        <Footer/>
+
+      </div>
+    )
+  }
+
+  componentDidMount = () => {
+    WebFont.load({
+			typekit : {
+				id : 'omj0hyx',
+				classes : false,
+				events: false,
+			}
+    })
+  }
+
+  categoryFilterOnClick = (category) => {
+    console.log(category)
+    this.setState({ category }, () => {
+      console.log(this.state.category)
+    })
+  }
+  
+}
+
+ReactDOM.render(<App />, document.getElementById('root'))
+registerServiceWorker()

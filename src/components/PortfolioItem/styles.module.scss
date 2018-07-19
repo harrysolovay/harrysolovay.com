@@ -1,0 +1,42 @@
+@import '_variables.scss';
+
+.container {
+  text-decoration: none;
+  &:hover {
+    opacity: .875;
+  }
+}
+
+.image {
+  width: 100%;
+  padding-bottom: 61.81%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.details {
+  background-color: #fafafa;
+  padding: 18px 16px 17px;
+  border-right: 1px solid #e9e9e9;
+  border-bottom: 1px solid #e9e9e9;
+  border-left: 1px solid #e9e9e9;
+}
+
+.title {
+  font-weight: 400;
+}
+
+.description {
+  font-family: 'raleway', sans-serif;
+  text-transform: none;
+  font-weight: 200;
+  font-size: 14px;
+  padding-top: 2px;
+}
+
+.date {
+  font-size: 14px;
+  color: #888;
+  padding-top: 2px;
+}

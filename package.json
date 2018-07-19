@@ -1,22 +1,37 @@
 {
   "name": "harrysolovay.com",
+  "description": "Harry Solovay's Developer & UX projects, psychology and futurism research, rap beats, and more.",
+  "author": "Harry Solovay",
   "version": "0.1.0",
+  "license": "MIT",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harrysolovay/harrysolovay.com"
+  },
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-ga": "^2.4.1",
-    "react-masonry-component": "^6.0.2",
-    "react-scripts": "1.1.0",
+    "antd": "^3.7.0",
+    "normalize.css": "^8.0.0",
+    "react": "^16.4.1",
+    "react-app-rewire-favicons-plugin": "^1.0.0",
+    "react-dom": "^16.4.1",
+    "react-ionicons": "^2.1.6",
+    "react-masonry-component": "^6.2.1",
+    "react-scripts": "1.1.4",
+    "shortid": "^2.2.12",
     "webfontloader": "^1.6.28"
   },
-  "scripts": {
-    "start": "react-scripts-with-sass start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
   "devDependencies": {
-    "create-react-app-sass": "^1.1.0"
+    "babel-plugin-import": "^1.8.0",
+    "node-sass": "^4.9.2",
+    "react-app-rewire-css-modules": "codebandits/react-app-rewire-css-modules",
+    "react-app-rewire-import": "^1.0.1",
+    "react-app-rewired": "^1.5.2",
+    "sass-loader": "^7.0.3"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom"
   }
 }

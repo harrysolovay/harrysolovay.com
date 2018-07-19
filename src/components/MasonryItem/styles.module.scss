@@ -1,0 +1,20 @@
+@import '_variables.scss';
+
+.container {
+
+  display: block;
+  float: left;
+  width: 95%;
+  margin: 2.5%;
+
+  @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    width: 47.5%;
+    margin: 1.25%;
+  }
+
+  @media screen and (min-width: $desktop-min-width) {
+    width: 30.8333%;
+    margin: 1.25%;
+  }
+
+}
