@@ -13,19 +13,34 @@ export default () => (
       />
       <div className={ styles.socialLinks }>
         <Anchor
-          href='https://github.com/harrysolovay'
+          href='https://www.linkedin.com/in/harrysolovay/'
           className={ styles.linkedIn }
-          children={ <i className='fa fa-linkedin' /> }
+          children={
+            <img
+              src={ require('assets/images/linkedin-logo.svg') }
+              alt='LinkedIn Logo'
+            />
+          }
         />
         <Anchor
-          href='https://www.linkedin.com/in/harrysolovay/'
+          href='https://github.com/harrysolovay'
           className={ styles.gitHub }
-          children={ <i className='fa fa-github' /> }
+          children={
+            <img
+              src={ require('assets/images/github-logo.svg') }
+              alt='GitHub Logo'
+            />
+          }
         />
         <Anchor
           href='https://www.instagram.com/hsolvz/'
           className={ styles.instagram }
-          children={ <i className='fa fa-instagram' /> }
+          children={
+            <img
+              src={ require('assets/images/instagram-logo.svg') }
+              alt='Instagram Logo'
+            />
+          }
         />
       </div>
       <Anchor

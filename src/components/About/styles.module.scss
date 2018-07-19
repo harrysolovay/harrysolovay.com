@@ -17,10 +17,32 @@
 }
 
 .bio {
+  padding-top: 3px;
   &, a {
     font-family: 'raleway', sans-serif;
     text-transform: none;
-    font-size: 14px;
-    padding-top: 2px;
+    font-size: 16px;
+    line-height: 26px;
   }
+}
+
+.reactJSLogo {
+  position: relative;
+  top: 1px;
+  height: 14px;
+}
+
+.nodeJSLogo {
+  position: relative;
+  top: 3px;
+  height: 16px;
+  color: #2f6c1c;
+}
+
+.npmLogo {
+  margin-right: 2px;
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+  height: 12px;
 }
