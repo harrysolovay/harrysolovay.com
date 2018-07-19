@@ -5,7 +5,7 @@ export default () => (
   <header className={ styles.header }>
     <div className={ styles.title }>Harry Solovay</div>
     <div className={ styles.subtitle }>
-      { `UX Designer, Dev., Futurism Nerd` }
+      { `JavaScript Dev. & Futurism Nerd` }
     </div>
   </header>
 )
