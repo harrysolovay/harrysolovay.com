@@ -23,7 +23,9 @@ class App extends Component {
 
         <Section>
           <div className={ styles.masonry }>
-            <Masonry>
+            <Masonry
+              ref={ this.setMasonryRef }
+            >
 
               <About />
 
@@ -60,6 +62,7 @@ class App extends Component {
   }
 
   componentDidMount = () => {
+
     WebFont.load({
 			typekit : {
 				id : 'omj0hyx',
@@ -67,6 +70,12 @@ class App extends Component {
 				events: false,
 			},
     })
+
+    // fix masonry item overlap bug
+    window.dispatchEvent(
+      new Event('resize')
+    )
+
   }
 
   categoryFilterOnClick = (category) => {
