@@ -31,7 +31,12 @@ export default () => (
           href={ require('assets/portfolio/self-designed-major/harry-solovay-self-designed-major.pdf') }
           children={ `"User Experience in Technology"` }
         />
-        { ` (a synthesis of Computer Science, Psychology & Philosophy). I love the open source community, ReactJS` }
+        { ` (a synthesis of Computer Science, Psychology & Philosophy). I love the open source community, ` }
+        <Anchor
+          href='https://reactjs.org'
+          children={ `ReactJS` }
+          className={ styles.noUnderline }
+        />
         <Anchor
           href='https://reactjs.org'
           children={
@@ -42,7 +47,12 @@ export default () => (
             />
           }
         />
-        { `, NodeJS` }
+        { `, ` }
+        <Anchor
+          href='https://nodejs.org/en/'
+          children={ `NodeJS` }
+          className={ styles.noUnderline }
+        />
         <Anchor
           href='https://nodejs.org/en/'
           children={
@@ -53,7 +63,12 @@ export default () => (
             />
           }
         />
-        { ` and its ecosystem` }
+        { ` and ` }
+        <Anchor
+          href='https://www.npmjs.com'
+          children={ `its ecosystem` }
+          className={ styles.noUnderline }
+        />
         <Anchor
           href='https://www.npmjs.com'
           children={
