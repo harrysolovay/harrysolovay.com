@@ -5,7 +5,7 @@ import { Anchor } from 'components'
 export default () => (
   <footer className={ styles.container }>
     <div className={ styles.links }>
-      <Anchor href={ require('assets/harry-solovay-resume.pdf') } target='_blank'>View Resume</Anchor>
+      <Anchor href={ require('assets/harry-solovay-resume.pdf') }>View Resume</Anchor>
       <div>|</div>
       <Anchor href='https://github.com/harrysolovay/harrysolovay.com'>View Site Source</Anchor>
     </div>
