@@ -64,9 +64,9 @@ class App extends Component {
   componentDidMount = () => {
 
     WebFont.load({
-			typekit : {
-				id : 'omj0hyx',
-				classes : false,
+			typekit: {
+				id: 'omj0hyx',
+				classes: false,
 				events: false,
 			},
     })
