@@ -13,7 +13,6 @@
     "antd": "^3.7.0",
     "normalize.css": "^8.0.0",
     "react": "^16.4.1",
-    "react-app-rewire-favicons-plugin": "^1.0.0",
     "react-dom": "^16.4.1",
     "react-masonry-component": "^6.2.1",
     "react-scripts": "1.1.4",
@@ -24,6 +23,7 @@
     "babel-plugin-import": "^1.8.0",
     "node-sass": "^4.9.2",
     "react-app-rewire-css-modules": "codebandits/react-app-rewire-css-modules",
+    "react-app-rewire-favicons-plugin": "^1.0.0",
     "react-app-rewire-import": "^1.0.1",
     "react-app-rewired": "^1.5.2",
     "sass-loader": "^7.0.3"

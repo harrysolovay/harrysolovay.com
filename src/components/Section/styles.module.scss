@@ -1,4 +1,6 @@
+@import '_variables.scss';
+
 .container {
-  max-width: 1200px;
+  max-width: $section-max-width;
   margin: 0px auto;
 }
