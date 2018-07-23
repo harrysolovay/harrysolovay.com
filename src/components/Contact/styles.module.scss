@@ -1,10 +1,8 @@
 .container {
   text-align: center;
-  > div {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-  }
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   a {
     text-decoration: none;
     font-size: 14px;

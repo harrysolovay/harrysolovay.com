@@ -1,14 +1,13 @@
 import React from 'react'
-import { MasonryItemStyle } from 'components'
+import { MasonryItem } from 'components'
 import styles from './styles.module.scss'
 import shortid from 'shortid'
 
 export const categories = [ 'ALL', 'DEV', 'RESEARCH', 'ETC', ]
 
 export default ({ onClick, activeCategory }) => (
-  <div className={ [styles.container, MasonryItemStyle].join(' ') }>
-    <div>
-
+  <MasonryItem>
+    <div className={ styles.container }>
       {
         categories.map(category => (
           <div
@@ -24,7 +23,6 @@ export default ({ onClick, activeCategory }) => (
           />
         ))
       }
-      
     </div>
-  </div>
+  </MasonryItem>
 )

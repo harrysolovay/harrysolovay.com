@@ -1,20 +1,9 @@
-module.exports = (config, env) => {
-
-  // automatically import antd component CSS when the JS module is imported
-  config = require('react-app-rewire-import')(config, env, {
-    libraryName: 'antd',
-    style: 'css',
-  })
-
-  // enable SCSS modules
-  config = require('react-app-rewire-css-modules')(config, env)
-
-  // generate site favicon and device shortcut icons in document head
-  config = require('react-app-rewire-favicons-plugin')(config, env, {
+const generateIcons = (config, env) => (
+  require('react-app-rewire-favicons-plugin')(config, env, {
     logo: './public/icon.png',
     prefix: 'icons-[hash]/',
     background: '#fff',
-    title: `Harry Solovay's Portfolio`,
+    title: 'harrysolovay.com',
     icons: {
       android: true,
       appleIcon: true,
@@ -28,7 +17,27 @@ module.exports = (config, env) => {
       windows: false,
     },
   })
+)
 
+const minifyImages = (config, env) => (
+  require('react-app-rewire-imagemin-plugin')(config, env, {
+    pngquant: {
+      quality: '95-100',
+    },
+  })
+)
+
+const executeBuildOnlyTasks = (config, env) => {
+  if(process.env.NODE_ENV === 'production') {
+    config = generateIcons(config, env)
+    config = minifyImages(config, env),
+    config = require('react-app-rewire-preload-plugin')(config, env)
+  }
+}
+
+module.exports = (config, env) => {
+  config = require('react-app-rewire-idx')(config, env)
+  config = require('react-app-rewire-css-modules')(config, env)
+  executeBuildOnlyTasks(config, env)
   return config
-
 }

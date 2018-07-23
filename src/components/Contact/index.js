@@ -1,11 +1,11 @@
 import React from 'react'
-import { MasonryItemStyle } from 'components'
+import { MasonryItem } from 'components'
 import styles from './styles.module.scss'
 import { Anchor } from 'components'
 
 export default () => (
-  <div className={ [styles.container, MasonryItemStyle].join(' ') }>
-    <div>
+  <MasonryItem>
+    <div className={ styles.container }>
       <Anchor
         href='mailto:harrysolovay@gmail.com'
         className={ styles.email }
@@ -49,5 +49,5 @@ export default () => (
         children='view resume'
       />
     </div>
-  </div>
+  </MasonryItem>
 )

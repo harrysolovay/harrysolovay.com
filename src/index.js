@@ -7,7 +7,6 @@ import portfolioItems from 'assets/portfolio'
 import shortid from 'shortid'
 import WebFont from 'webfontloader'
 import ReactDOM from 'react-dom'
-import registerServiceWorker from 'utilities/registerServiceWorker'
 
 class App extends Component {
 
@@ -23,9 +22,7 @@ class App extends Component {
 
         <Section>
           <div className={ styles.masonry }>
-            <Masonry
-              ref={ this.setMasonryRef }
-            >
+            <Masonry ref={ this.setMasonryRef }>
 
               <About />
 
@@ -85,4 +82,3 @@ class App extends Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))
-registerServiceWorker()
