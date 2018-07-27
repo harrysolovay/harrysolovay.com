@@ -6,7 +6,8 @@ import styles from './styles.module.scss'
 import portfolioItems from 'assets/portfolio'
 import shortid from 'shortid'
 import WebFont from 'webfontloader'
-import ReactDOM from 'react-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { hydrate, render } from 'react-dom'
 
 class App extends Component {
 
@@ -81,4 +82,15 @@ class App extends Component {
   
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+const AppWith404Prevention = () => (
+  <Router>
+    <Route path='*' component={ App } />
+  </Router>
+)
+
+const rootElement = document.getElementById('root')
+if(rootElement.hasChildNodes()) {
+  hydrate(<AppWith404Prevention />, rootElement)
+} else {
+  render(<AppWith404Prevention />, rootElement)
+}
