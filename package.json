@@ -29,20 +29,10 @@
     "react-app-rewire-import": "^1.0.1",
     "react-app-rewire-preload-plugin": "^1.0.0",
     "react-app-rewired": "^1.5.2",
-    "react-snap": "^1.17.0",
     "sass-loader": "^7.0.3"
   },
   "scripts": {
     "start": "react-app-rewired start NODE_ENV=development",
-    "build": "react-app-rewired build NODE_ENV=production",
-    "postbuild": "react-snap"
-  },
-  "reactSnap": {
-    "source": "build",
-    "minifyHtml": {
-      "collapseWhitespace": true,
-      "removeComments": true
-    },
-    "inlineCss": true
+    "build": "react-app-rewired build NODE_ENV=production"
   }
 }
