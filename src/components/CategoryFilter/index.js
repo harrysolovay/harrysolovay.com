@@ -1,7 +1,6 @@
 import React from 'react'
 import { MasonryItem } from 'components'
 import styles from './styles.module.scss'
-import shortid from 'shortid'
 
 export const categories = [ 'ALL', 'DEV', 'RESEARCH', 'ETC', ]
 
@@ -11,7 +10,7 @@ export default ({ onClick, activeCategory }) => (
       {
         categories.map(category => (
           <div
-            key={ shortid.generate() }
+            key={ category }
             { ...{ category } }
             onClick={ () => onClick(category) }
             children={ category }

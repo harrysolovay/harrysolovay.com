@@ -4,7 +4,6 @@ import { Header, Section, About, Contact, CategoryFilter, PortfolioItem, Footer 
 import Masonry from 'react-masonry-component'
 import styles from './styles.module.scss'
 import portfolioItems from 'assets/portfolio'
-import shortid from 'shortid'
 import WebFont from 'webfontloader'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { hydrate, render } from 'react-dom'
@@ -41,7 +40,7 @@ class App extends Component {
                     this.state.category === 'ALL'
                   ) ? (
                       <PortfolioItem
-                        key={ shortid.generate() }
+                        key={ props.title }
                         { ...props }
                       />
                     )

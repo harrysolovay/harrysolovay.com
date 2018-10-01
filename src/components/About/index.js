@@ -11,28 +11,12 @@ export default () => (
           About Me
         </div>
         <div className={ styles.bio }>
-          { `I'm a full-stack javascript developer and beat-maker (I go by "` }
-          <Anchor
-            href='https://soundcloud.com/solved1'
-            children='solved1'
-          />
-          { `"` }
-          <Anchor
-            href='https://soundcloud.com/solved1'
-            children={
-              <img
-                src={ require('assets/images/soundcloud-logo.svg') }
-                className={ styles.soundCloudLogo }
-                alt='SoundCloud Logo'
-              />
-            }
-          />
-          { `) from New York City. I just graduated from Connecticut College, where I self-designed my major, ` }
+          { `I'm a full-stack javascript developer from New York City. I recently graduated Connecticut College, where I self-designed my major, ` }
           <Anchor
             href={ require('assets/portfolio/self-designed-major/harry-solovay-self-designed-major.pdf') }
             children={ `"User Experience in Technology"` }
           />
-          { ` (a synthesis of Computer Science, Psychology & Philosophy). I love the open source community, ` }
+          { ` (a synthesis of Computer Science and Psychology). I love the open source community, ` }
           <Anchor
             href='https://reactjs.org'
             children={ `ReactJS` }
@@ -48,7 +32,7 @@ export default () => (
               />
             }
           />
-          { `, ` }
+          { `, and ` }
           <Anchor
             href='https://nodejs.org/en/'
             children={ `NodeJS` }
@@ -64,23 +48,7 @@ export default () => (
               />
             }
           />
-          { ` and ` }
-          <Anchor
-            href='https://www.npmjs.com'
-            children={ `its ecosystem` }
-            className={ styles.noUnderline }
-          />
-          <Anchor
-            href='https://www.npmjs.com'
-            children={
-              <img
-                src={ require('assets/images/npm-logo.svg') }
-                className={ styles.npmLogo }
-                alt='NPM Logo'
-              />
-            }
-          />
-          { `. I also love speaking with others who are fascinated by tech and UX, so please reach out to me–even if it isn't in regards to a project or job opportunity.` }
+          { `. I also love speaking with others who are fascinated by tech and UX, so please reach out–even if it isn't in regards to a project or job opportunity.` }
         </div>
       </div>
     </div>
