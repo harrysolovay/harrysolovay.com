@@ -19,7 +19,7 @@ export default () => (
           { ` (a synthesis of Computer Science and Psychology). I love the open source community, ` }
           <Anchor
             href='https://reactjs.org'
-            children={ `ReactJS` }
+            children={ `React` }
             className={ styles.noUnderline }
           />
           <Anchor
@@ -28,14 +28,14 @@ export default () => (
               <img
                 src={ require('assets/images/reactjs-logo.svg') }
                 className={ styles.reactJSLogo }
-                alt='ReactJS Logo'
+                alt='React Logo'
               />
             }
           />
           { `, and ` }
           <Anchor
             href='https://nodejs.org/en/'
-            children={ `NodeJS` }
+            children={ `Node` }
             className={ styles.noUnderline }
           />
           <Anchor
@@ -44,11 +44,16 @@ export default () => (
               <img
                 src={ require('assets/images/nodejs-logo.svg') }
                 className={ styles.nodeJSLogo }
-                alt='NodeJS Logo'
+                alt='Node Logo'
               />
             }
           />
-          { `. I also love speaking with others who are fascinated by tech and UX, so please reach out–even if it isn't in regards to a project or job opportunity.` }
+          { `. I also love speaking with others who are fascinated by tech and developer experience, so please reach out–even if it isn't in regards to a project or job opportunity. For a more detailed bio, ` }
+          <Anchor
+            href='https://github.com/harrysolovay/readme/blob/master/README.md'
+            children='click here'
+          />
+          .
         </div>
       </div>
     </div>

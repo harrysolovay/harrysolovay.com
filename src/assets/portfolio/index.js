@@ -1,4 +1,5 @@
 export default [
+  require('./state-mint'),
   require('./serverless-event-gateway-page'),
   require('./smartphones-personality-and-life-satisfaction'),
   require('./react-native-x-bar'),
